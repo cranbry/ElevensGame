@@ -1,5 +1,5 @@
-### Project Overview:
-  Elevens is a card game where the user is dealt 9 cards randomly, the point of the game is to find pairs of cards that when added, their value results in 11. The game ends when the user runs out of available pairs of 11 on the board. The user wins when there are no more cards on the deck and the board.
+# Project Overview:
+  Elevens is a card game where the user is dealt 9 cards randomly, the point of the game is to find pairs of cards that when added, their value results in 11. The game ends when the user     runs out of available pairs of 11 on the board. The user wins when there are no more cards on the deck and the board.
   
 ## Key Stakeholders:
   ### End-user: People looking for a casual card game for mental stimulation and for some easy quick math.  

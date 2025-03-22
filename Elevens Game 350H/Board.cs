@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 public class Board
 {
@@ -27,5 +29,23 @@ public class Board
         }
     }
 
+    // checking if selected cards add up to 11
+    public bool checkSum()
+    {
+        if (selectedCards.Count < 2)
+        {
+            return false;
+        } 
+        int sum = 0;
+
+        foreach (int position in selectedCards) {
+            // checking if not null for when cards are deleted
+            if (position >= 0 && position < cards.Length && cards[position] != null){
+                sum += cards[position].GetValue();
+            }
+        }
+
+        return sum == 11;
+    }
 
 }

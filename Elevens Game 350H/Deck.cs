@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -49,6 +49,11 @@ public class Deck
         }
     }
 
+    public Card DealCard()
+    {
+        return TakeTopCard();
+    }
+
     //Shuffle Method
     public void Shuffle()
     {
@@ -90,25 +95,13 @@ public class Deck
         cards.AddRange(topPortion);
     }
 
-    // public int getRemainingCards() {
-    // int count = 0;
-    // Deck deck
-    //     for (int i = 0; i < cards.Count; i++) {
-    //         if  ()
-    //     }
-    //     if ()
-    // }
-
-    public bool checkForSum() {
-    bool isFound = false;
-
-        Card card = cards[0];
-
-        if (card.Rank == card[1]) {
-            
-        }
-
-        return isFound;
-    } 
+    public int getRemainingCards()
+    {
+        return cards.Count;
+    }
+    public bool isEmpty()
+    {
+        return cards.Count == 0;
+    }
 }
 

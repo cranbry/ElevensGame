@@ -14,6 +14,27 @@ public class ElevensGame
         win_count = 0;
         loss_count = 0;
     }
+    public void StarNewGame() {
+        // creating new deck and shuffling it
+        deck = new Deck;
+        deck.Shuffle();
+
+        // creating new board
+        board = new Board();
+
+        // dealing first board of cards
+        for (int i =0; i < 9; i++) {
+            Card card = deck.DealCard();
+
+            if (card != null) {
+                // turn card face up
+                card.FlipOver();
+
+                // adding it to the board
+                board.replaceSelectedCard(i, card);
+            }
+        }
+    }
     public void selectedCard() {
         Card selectedCard = board.Select(position);
     }
